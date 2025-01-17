@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Future Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      .project-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .project-title {
+        font-size: 1.5rem;
+        color: #0d6efd;
+      }
+
+      .project-description {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .project-link {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #0d6efd;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 10px;
+        display: block;
+      }
+
+      .project-link:hover {
+        background-color: #0056b3;
+      }
+
+      .container.my-5 {
+        max-width: 1200px;
+      }
+      .logo {
+            width: 50px;
+            height: 50px;
+            color: rgb(0, 0, 0);
+            margin-top: 0;
+            margin-left: 2px;
+        }
+
+        .myimg {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+        .navbar-nav .nav-link:hover {
+        color: #0d6efd;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body style="background-image: url('/static/background (2).jpg'); background-size: cover; background-position: center;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="logo">
+          <img class="myimg" src="{{ url_for('static', filename='img.png') }}" alt="">
+        </div>
+        <a class="navbar-brand ms-2" href="/home">Health Center</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/developer">Developer</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="/future">Future</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-outline-primary" type="button"><a href="/signup">Logout</a></button>
+        </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Future Projects Section -->
+    <div class="container my-5">
+      <h2 style="color:#0d6efd;">My Future Healthcare Projects</h2>
+
+      <!-- Health ATM Project -->
+      <div class="project-card">
+        <!-- <img src="/static/health-atm.jpeg" alt="Health ATM" class="project-image"> -->
+        <div class="p-3">
+          <h3 class="project-title">Health ATM</h3>
+          <p class="project-description">A self-service health kiosk to monitor vital signs such as blood pressure, temperature, and heart rate. The system provides instant feedback and recommendations.</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5544459/" class="project-link">Learn More</a>
+        </div>
+      </div>
+
+      <!-- AI-based Health Monitoring System -->
+      <div class="project-card">
+        <!-- <img src="/static/health-monitoring.jpg" alt="AI-based Health Monitoring" class="project-image"> -->
+        <div class="p-3">
+          <h3 class="project-title">AI-based Health Monitoring System</h3>
+          <p class="project-description">A system that tracks health metrics from wearable devices and provides real-time analysis and emergency alerts.</p>
+          <a href="https://ieeexplore.ieee.org/document/9320793" class="project-link">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Telemedicine App -->
+      <div class="project-card">
+        <!-- <img src="/static/telemedicine.jpg" alt="Telemedicine App" class="project-image"> -->
+        <div class="p-3">
+          <h3 class="project-title">Telemedicine App</h3>
+          <p class="project-description">An app that allows patients to consult doctors remotely with video calls, chat, and prescriptions.</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8590973/" class="project-link">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Personalized Health Recommendations -->
+      <div class="project-card">
+        <!-- <img src="/static/personalized-health.jpg" alt="Personalized Health Recommendations" class="project-image"> -->
+        <div class="p-3">
+          <h3 class="project-title">Personalized Health Recommendations</h3>
+          <p class="project-description">An app that provides personalized health tips based on the user’s profile, preferences, and health data.</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8521939/" class="project-link">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Disease Prediction System -->
+      <div class="project-card">
+        <!-- <img src="/static/disease-prediction.jpg" alt="Disease Prediction" class="project-image"> -->
+        <div class="p-3">
+          <h3 class="project-title">Disease Prediction and Prevention System</h3>
+          <p class="project-description">A system that predicts potential diseases based on user-provided symptoms and medical history using machine learning.</p>
+          <a href="https://www.mdpi.com/journal/life/special_issues/disease_prediction_prevention" class="project-link">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Mental Health App -->
+      <div class="project-card">
+        <!-- <img src="/static/mental-health.jpg" alt="Mental Health App" class="project-image"> -->
+        <div class="p-3">
+          <h3 class="project-title">Mental Health and Well-being App</h3>
+          <p class="project-description">An app focused on mental health support with mood tracking, stress-relief exercises, and self-care tips.</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9505389/" class="project-link">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
